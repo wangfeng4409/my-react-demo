@@ -5,6 +5,17 @@
   .img-component {
     padding-top: 100px;
     text-align: center;
+    img {
+      animation: logo-spin infinite 10s linear;
+    }
+    @keyframes logo-spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
   }
   .login-form {
     text-align: center;
