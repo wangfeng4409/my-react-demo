@@ -14,6 +14,7 @@ export default class Login extends Component {
     }
     this.handleChangeUname = this.handleChangeUname.bind(this)
     this.handleChangePword = this.handleChangePword.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
   handleChangeUname(e) {
@@ -30,6 +31,12 @@ export default class Login extends Component {
     }, () => {
       console.log(this.state)
     })
+  }
+
+  handleClick(e) {
+    e.preventDefault()
+    // this.props.router.push('/home')
+    this.props.router.replace('/home')
   }
 
   render() {
@@ -55,7 +62,7 @@ export default class Login extends Component {
           />
           {/* 3）登录 */}
           <Link to="/home">
-            <FormBtn name="login-btn">登录</FormBtn>
+            <FormBtn name="login-btn" onClick={this.handleClick}>登录</FormBtn>
           </Link>
           {/* 4）忘记密码 */}
           <FormBtn type="ordinary">忘记密码</FormBtn>
