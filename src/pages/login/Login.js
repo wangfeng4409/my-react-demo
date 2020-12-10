@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router'
 import './login.less'
 import Img from '@/components/img/Img'
 import FormInput from '@/components/formInput/FormInput'
@@ -35,8 +34,8 @@ export default class Login extends Component {
 
   handleClick(e) {
     e.preventDefault()
-    // this.props.router.push('/home')
-    this.props.router.replace('/home')
+    // this.props.history.push('/home')
+    this.props.history.replace('/home')
   }
 
   render() {
@@ -61,9 +60,7 @@ export default class Login extends Component {
             onChange={this.handleChangePword}
           />
           {/* 3）登录 */}
-          <Link to="/home">
-            <FormBtn name="login-btn" onClick={this.handleClick}>登录</FormBtn>
-          </Link>
+          <FormBtn name="login-btn" onClick={this.handleClick}>登录</FormBtn>
           {/* 4）忘记密码 */}
           <FormBtn type="ordinary">忘记密码</FormBtn>
           <FormBtn>免费注册</FormBtn>&emsp;

@@ -8,4 +8,3 @@ import 'normalize.css'
 
 // 引入全局样式
 import '@/assets/styles/core.less'
-
